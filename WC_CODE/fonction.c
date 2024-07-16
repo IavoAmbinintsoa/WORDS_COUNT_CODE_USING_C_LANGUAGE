@@ -121,6 +121,7 @@ int MaximalLine(FILE *file)
     int c;
     int nombre = 0;
     max = nombre;
+    rewind(file);//repointer le pointeur vers le debut du fichier
     while(!feof(file))
     {
         c = fgetc(file);
@@ -144,6 +145,7 @@ int bytes(FILE *file)
 {
     int nombre = 0;
     int c;
+    rewind(file);//repointer le pointeur vers le debut du fichier
     while(1)
     {
         c = fgetc(file);
