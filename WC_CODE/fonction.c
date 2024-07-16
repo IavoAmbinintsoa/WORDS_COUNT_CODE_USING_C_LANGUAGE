@@ -56,6 +56,7 @@ void option(int argc,char *argv[])
     if(file == NULL)
     {
         printf("  Erreur lors de l'ouverture\n");
+        printf("  Consulter ./wc --help ou verifier votre fichier\n");
         exit(EXIT_FAILURE);
     }
     for(i = 1;i<argc;i++)
