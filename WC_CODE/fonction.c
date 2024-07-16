@@ -27,6 +27,7 @@ int NombreDeCaractere(FILE *file)
     while(!feof(file))
     {
         c = fgetc(file);
+        //pour considérer les caractere speciaux comme une seule caractere
         if((c & 0xC0) != 0x80 && c != EOF)
             nombre++;
     }
@@ -124,7 +125,7 @@ int MaximalLine(FILE *file)
     {
         c = fgetc(file);
         //le variable nombre est le nombre de caractere dans une phrase
-        if((c & 0xC0) != 0x80 && c != EOF)
+        if((c & 0xC0) != 0x80 && c != EOF)    //pour considérer les caractere speciaux comme une seule caractere
             nombre++;
         if(c == '\n')
         {
